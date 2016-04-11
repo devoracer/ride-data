@@ -5,14 +5,14 @@ TOKEN = ENV['STRAVA_TOKEN']
 client = Strava::Api::V3::Client.new(:access_token => TOKEN)
 activities = client.list_athlete_activities
 
-max_speedms = activities.first["max_speed"]
+max_speedms = activities[1]["max_speed"]
 
 max_speedmph = (max_speedms * 2.23694).round(2)
 puts "Your max speed was #{max_speedmph}mph!"
 
-# elev_gain = activities.first["total_elevation_gain"]
-# elev_gainft = (elev_gain * 3.28084).round(2)
-# puts "You gained #{elev_gainft}ft of elevation....via chairlift"
+elev_gain = activities[1]["total_elevation_gain"]
+elev_gainft = (elev_gain * 3.28084).round(2)
+puts "You gained #{elev_gainft}ft of elevation"
 # do this for each of my last 30 activities
 # add comma?
 # introduce a function
