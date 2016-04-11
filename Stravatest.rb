@@ -21,10 +21,8 @@ puts "You gained #{elev_gainft}ft of elevation"
 
 # # pp activities
 # puts activities.length
-# activities.each do |activity|
-#   # puts activity["name"]
-#   #   puts activity["max_speed"]
-#   name = activity["name"]
-#   max_speedms = activity["max_speed"]
-#   puts "On #{name} your max speed was #{max_speedms}."
-# end
+activities.each do |activity|
+  name = activity["name"]
+  max_speedms = activity["max_speed"]
+  puts "On #{name} your max speed was #{max_speedms}."
+end
