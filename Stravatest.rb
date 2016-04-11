@@ -13,9 +13,6 @@ puts "Your max speed was #{max_speedmph}mph!"
 elev_gain = activities[1]["total_elevation_gain"]
 elev_gainft = (elev_gain * 3.28084).round(2)
 puts "You gained #{elev_gainft}ft of elevation"
-# do this for each of my last 30 activities
-# add comma?
-# introduce a function
 
 # max_speedmsall = activities["max_speed"]
 
